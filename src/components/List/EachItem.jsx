@@ -15,12 +15,15 @@ function EachItem({ recipes }) {
               <li>
                 <h2>{recipe.recipe.label}</h2>
               </li>
+              <li>
+                <p>[{recipe.recipe.cuisineType}]</p>
+              </li>
               <div className="link_btn">
-                <li>
-                  <Link to="/ingredients">Ingredients</Link>
+                <li className="ingredients_btn">
+                  <Link to="/ingredients" className="link">Ingredients</Link>
                 </li>
-                <li>
-                  <Link to="">Detail</Link>
+                <li className="detail_btn">
+                  <Link to="" className="link">Detail</Link>
                 </li>
               </div>
             </div>

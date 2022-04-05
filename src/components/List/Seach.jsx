@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Button from "@mui/material/Button";
 import Input from "@mui/material/Input";
-import Typography from "@mui/material/Typography";
+// import Button from "@mui/material/Button";
+// import Typography from "@mui/material/Typography";
 import "./Search.css";
+import search from '../../gif/search.gif';
 
 const { REACT_APP_ID, REACT_APP_KEY } = process.env;
 function Search({setRecipes}) {
@@ -34,21 +35,25 @@ function Search({setRecipes}) {
   };
 
   useEffect(() => {
-    getRecipe();
+    // getRecipe();
   }, [item]);
 
   return (
-    <div className="list_container">
+    <div className="search_container">
       <div className="search">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form_container">
           <Input
             placeholder="Search..."
             onChange={handleChange}
             value={inputValue}
+            className="input"
           />
-          <Button variant="contained" onClick={handleSubmit} >
-            <Typography variant="p">Search</Typography>
-          </Button>
+          <div className="search_icon">
+            <img src={search} alt="seach icon" />
+          </div>
+          {/* <Button variant="contained" onClick={handleSubmit} className="search_btn" >
+            <Typography>Search</Typography>
+          </Button> */}
         </form>
       </div>
     </div>
