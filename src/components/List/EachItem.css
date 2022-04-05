@@ -14,8 +14,21 @@
   gap: 20px;
 }
 
-.recipe_list li {
+.recipe_item {
   border: 1px solid blue;
   width: 350px;
-  height: 350px;
+  height: auto;
+}
+
+.recipe_item li img {
+  width: 100%;
+}
+
+.link_btn {
+  display: flex;
+  justify-content: center;
+}
+.link_btn li {
+  width: 50%;
+  text-align: center;
 }

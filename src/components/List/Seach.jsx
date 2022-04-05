@@ -8,7 +8,7 @@ const { REACT_APP_ID, REACT_APP_KEY } = process.env;
 function Search({setRecipes}) {
   // useState()---------------------------------
   const [inputValue, setInputValue] = useState("");
-  const [item, setItem] = useState("banana");
+  const [item, setItem] = useState("");
  
   //--------------------------------------------
 
@@ -30,21 +30,23 @@ function Search({setRecipes}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setItem(inputValue);
+    setInputValue('');
   };
 
   useEffect(() => {
-    // getRecipe();
+    getRecipe();
   }, [item]);
+
   return (
     <div className="list_container">
       <div className="search">
         <form onSubmit={handleSubmit}>
           <Input
-            placeholder="Placeholder"
+            placeholder="Search..."
             onChange={handleChange}
             value={inputValue}
           />
-          <Button variant="contained">
+          <Button variant="contained" onClick={handleSubmit} >
             <Typography variant="p">Search</Typography>
           </Button>
         </form>

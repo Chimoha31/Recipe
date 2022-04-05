@@ -8,7 +8,7 @@ function List() {
   return (
     <div>
       <Search setRecipes={setRecipes} />
-      <EachItem />
+      <EachItem recipes={recipes} />
     </div>
   );
 }
