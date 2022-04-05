@@ -17,7 +17,7 @@ function EachItem({ recipes }) {
               </li>
               <div className="link_btn">
                 <li>
-                  <Link to="">Ingredients</Link>
+                  <Link to="/ingredients">Ingredients</Link>
                 </li>
                 <li>
                   <Link to="">Detail</Link>
