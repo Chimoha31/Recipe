@@ -1,0 +1,19 @@
+.ingredients_detail {
+  width: 100%;
+  background-color: rgb(228, 228, 228);
+}
+
+.list {
+  margin: 10px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.order {
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}

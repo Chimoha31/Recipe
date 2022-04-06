@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./EachItem.css";
-import Ingredient from '../Ingredients/Ingredients';
+import Ingredient from "../Ingredients/Ingredients";
+import { v4 as uuidv4 } from "uuid";
 
 function EachItem({ recipes }) {
+  const [show, setShow] = useState(false);
+
+  const handleClick = () => {
+    setShow(!show);
+  };
+
   return (
     <div>
       <div className="recipe_list">
@@ -21,11 +28,15 @@ function EachItem({ recipes }) {
               {/* Btn */}
               <div className="link_btn">
                 <li className="detail_btn">
-                  <a href={recipe.recipe.url} className="detail_link">Detail</a>
+                  <a href={recipe.recipe.url} className="detail_link">
+                    Detail
+                  </a>
                 </li>
-                <li className="ingredients_btn">
+                <li className="ingredients_btn" onClick={handleClick}>
                   <span className="btn">Ingredients</span>
-                  <Ingredient ingredients={recipe.recipe.ingredients} />
+                  {show && (
+                    <Ingredient ingredients={recipe.recipe.ingredients} />
+                  )}
                 </li>
               </div>
             </div>
