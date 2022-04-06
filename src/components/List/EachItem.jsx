@@ -28,7 +28,7 @@ function EachItem({ recipes }) {
               {/* Btn */}
               <div className="link_btn">
                 <li className="detail_btn">
-                  <a href={recipe.recipe.url} className="detail_link">
+                  <a href={recipe.recipe.url} className="detail_link" target="_blank">
                     Detail
                   </a>
                 </li>

@@ -19,7 +19,7 @@ function Header() {
               sx={{ mr: 2 }}
             ></IconButton>
             <Typography variant="h6" color="inherit" component="div">
-              Recipe
+              Ezy Pzy Recipe
             </Typography>
           </Toolbar>
         </AppBar>

@@ -54,15 +54,38 @@
   opacity: 0.5;
 }
 
+.right_stripe {
+  background: rgb(233, 93, 80);
+}
+
 .left_stripe {
   left: 120px;
+  animation: stripe_left 2.5s ease-in-out;
 }
 .right_stripe {
   right: 120px;
+  animation: stripe_right 2.5s ease-in-out;
 }
 
-img {
-  width: 800px;
+@keyframes stripe_left {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes stripe_right {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.lemmon img {
+  width: 600px;
   max-width: 100%;
   position: absolute;
   top: 45%;
@@ -93,13 +116,14 @@ img {
 }
 
 .product_text {
+  width: 100%;
   position: absolute;
   bottom: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  animation: slide_title 0.5s ease-in-out;
-  animation-delay: 0.3s;
+  animation: slide_title 0.9s ease-in-out;
+  /* border: 1px solid red; */
 }
 
 @keyframes slide_title{
@@ -113,8 +137,10 @@ img {
 
 .product_title {
   font-size: 100px;
-  color: #fff;
+  color: rgb(243, 241, 241);
+  color: rgb(243, 241, 241);
 }
+
 
 .product_title::after {
   content: ".";
@@ -125,4 +151,37 @@ img {
   color: #fff;
   font-size: 25px;
   font-weight: 500;
+}
+
+.start_btn {
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  width: 150px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgb(87, 81, 81);
+  animation: slide_btn 1.2s ease-in-out forwards;
+}
+
+.start_btn:hover {
+  opacity: 0.7;
+}
+
+.start_btn .btn {
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Lalezar', cursive;
+}
+
+@keyframes slide_btn{
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 13%;
+  }
 }
