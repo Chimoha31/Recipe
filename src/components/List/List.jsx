@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Search from "./Seach";
+import Search from "./Search";
 import EachItem from './EachItem';
 import "./List.css";
 

@@ -48,35 +48,33 @@
 
 /* Btn */
 .link_btn {
-  display: flex;
-  justify-content: center;
+  margin-top: 30px;
 }
 .link_btn li {
-  width: 50%;
+  width: 100%;
   text-align: center;
-  padding: 10px 0;
-  margin-top: 30px;
-  border-radius: 5px;
+  padding: 8px 0;
 }
 
 .link_btn li .ingredients_link,
 .link_btn li .detail_link{
   text-decoration: none;
   font-family: 'Lalezar', cursive;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .ingredients_btn {
   background-color: rgb(245, 77, 77);
+  border-radius: 0 0 10px 10px;
 }
 
 .ingredients_link {
   color: #fff;
 }
-
 .detail_btn {
   border: 1px solid #ccc;
 }
+
 .detail_link {
   color: rgb(245, 77, 77);
 }

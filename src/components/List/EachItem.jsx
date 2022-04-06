@@ -1,10 +1,9 @@
+import { Receipt } from "@mui/icons-material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./EachItem.css";
 
 function EachItem({ recipes }) {
-  const [recipeIngredients, setRecipeIngredients] = useState("");
-
   return (
     <div>
       <div className="recipe_list">
@@ -20,13 +19,13 @@ function EachItem({ recipes }) {
               <li>
                 <p>[{recipe.recipe.cuisineType}]</p>
               </li>
-            {/* Btn */}
+              {/* Btn */}
               <div className="link_btn">
-                <li className="ingredients_btn">
-                  <Link to="/ingredients" className="ingredients_link" >Ingredients</Link>
-                </li>
                 <li className="detail_btn">
-                  <Link to="" className="detail_link">Detail</Link>
+                  <a href={recipe.recipe.url} className="detail_link">Detail</a>
+                </li>
+                <li className="ingredients_btn">
+                  <span className="ingredients_link">Ingredients</span>
                 </li>
               </div>
             </div>

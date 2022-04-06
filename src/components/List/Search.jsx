@@ -33,7 +33,7 @@ function Search({setRecipes}) {
   };
 
   useEffect(() => {
-    getRecipe();
+    // getRecipe();
   }, [item]);
 
   return (
@@ -41,7 +41,7 @@ function Search({setRecipes}) {
       <div className="search">
         <form onSubmit={handleSubmit} className="form_container">
           <Input
-            placeholder="Search..."
+            placeholder="Search Recipe..."
             onChange={handleChange}
             value={inputValue}
             className="input"
