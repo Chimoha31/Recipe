@@ -1,4 +1,5 @@
 import React from 'react';
+import Title from '../Title/Title';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -24,6 +25,7 @@ function Header() {
           </Toolbar>
         </AppBar>
       </Box>
+      <Title />
     </div>
   )
 }
