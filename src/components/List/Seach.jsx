@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Input from "@mui/material/Input";
-// import Button from "@mui/material/Button";
-// import Typography from "@mui/material/Typography";
 import "./Search.css";
 import search from '../../gif/search.gif';
 
@@ -35,7 +33,7 @@ function Search({setRecipes}) {
   };
 
   useEffect(() => {
-    // getRecipe();
+    getRecipe();
   }, [item]);
 
   return (
@@ -48,12 +46,9 @@ function Search({setRecipes}) {
             value={inputValue}
             className="input"
           />
-          <div className="search_icon">
+          <div className="search_icon" onClick={handleSubmit}>
             <img src={search} alt="seach icon" />
           </div>
-          {/* <Button variant="contained" onClick={handleSubmit} className="search_btn" >
-            <Typography>Search</Typography>
-          </Button> */}
         </form>
       </div>
     </div>

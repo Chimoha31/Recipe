@@ -1,10 +1,11 @@
 import React from 'react';
 
-
-function Ingredients() {
+function Ingredients({recipes}) {
   return (
     <div>
-      <h1>This is Ingredients</h1>
+      <ul>
+        <li>How to make</li>
+      </ul>
     </div>
   )
 }
