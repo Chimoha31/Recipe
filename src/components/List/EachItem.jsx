@@ -14,8 +14,8 @@ function EachItem({ recipes }) {
     <div>
       <div className="recipe_list">
         <ul>
-          {recipes.map((recipe, index) => (
-            <div key={index} className="recipe_item">
+          {recipes.map((recipe) => (
+            <div key={uuidv4()} className="recipe_item">
               <li>
                 <img src={recipe.recipe.image} alt="recipe" />
               </li>

@@ -1,18 +1,17 @@
 import "./App.css";
+import Title from "./components/Title/Title";
 import Header from "./components/Header/Header";
-import List from "./components/List/List";
-// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Header />
-      <List />
-      {/* <Router>
+      <Router>
         <Routes>
-          <Route path="/" element={} />
+          <Route path="/" element={<Title />}/>
+          <Route path="/recipe" element={ <Header />}/>
         </Routes>
-      </Router> */}
+      </Router>
     </div>
   );
 }

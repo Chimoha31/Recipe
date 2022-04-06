@@ -33,7 +33,7 @@ function Search({setRecipes}) {
   };
 
   useEffect(() => {
-    getRecipe();
+    // getRecipe();
   }, [item]);
 
   return (

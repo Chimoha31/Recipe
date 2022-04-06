@@ -1,5 +1,5 @@
-import React from 'react';
-import Title from '../Title/Title';
+import React from "react";
+import List from "../List/List";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,23 +11,22 @@ function Header() {
     <div>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
-          <Toolbar style={{backgroundColor: "#333"}}>
+          <Toolbar style={{ backgroundColor: "#333" }}>
             <IconButton
               edge="start"
               color="inherit"
               aria-label="menu"
               sx={{ mr: 2 }}
-            >
-            </IconButton>
+            ></IconButton>
             <Typography variant="h6" color="inherit" component="div">
               Recipe
             </Typography>
           </Toolbar>
         </AppBar>
       </Box>
-      <Title />
+      <List />
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
