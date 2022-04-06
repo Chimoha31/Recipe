@@ -1,7 +1,6 @@
-import { Receipt } from "@mui/icons-material";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "./EachItem.css";
+import Ingredient from '../Ingredients/Ingredients';
 
 function EachItem({ recipes }) {
   return (
@@ -25,7 +24,8 @@ function EachItem({ recipes }) {
                   <a href={recipe.recipe.url} className="detail_link">Detail</a>
                 </li>
                 <li className="ingredients_btn">
-                  <span className="ingredients_link">Ingredients</span>
+                  <span className="btn">Ingredients</span>
+                  <Ingredient ingredients={recipe.recipe.ingredients} />
                 </li>
               </div>
             </div>

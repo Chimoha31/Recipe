@@ -56,7 +56,7 @@
   padding: 8px 0;
 }
 
-.link_btn li .ingredients_link,
+.link_btn li .btn,
 .link_btn li .detail_link{
   text-decoration: none;
   font-family: 'Lalezar', cursive;
@@ -68,7 +68,7 @@
   border-radius: 0 0 10px 10px;
 }
 
-.ingredients_link {
+.btn{
   color: #fff;
 }
 .detail_btn {
