@@ -44,6 +44,8 @@
 .title_container h2 {
   padding: 5px;
   margin-bottom: 0;
+  font-family: 'Lalezar', cursive;
+  font-weight: 400;
 }
 
 .clock_container {
