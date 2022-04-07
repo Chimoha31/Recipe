@@ -1,6 +1,5 @@
 .recipe_list {
   width: 100%;
-  display: flex;
 }
 
 .recipe_list ul {
@@ -44,7 +43,6 @@
   margin: 0;
 }
 
-/* Btn */
 .link_btn {
   margin-top: 30px;
 }
@@ -63,9 +61,10 @@
 .ingredients_btn {
   background-color: rgb(245, 77, 77);
   border-radius: 0 0 10px 10px;
+  cursor: pointer;
 }
 
-.btn{
+.ingredients_btn .btn{
   color: #fff;
 }
 .detail_btn {

@@ -1,10 +1,12 @@
 import React from "react";
+import './Header.css';
 import List from "../List/List";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
+import {Link} from 'react-router-dom';
 
 function Header() {
   return (
@@ -19,7 +21,7 @@ function Header() {
               sx={{ mr: 2 }}
             ></IconButton>
             <Typography variant="h6" color="inherit" component="div">
-              Ezy Pzy Recipe
+              <Link to="/" className="logo">Ezy Pzy Recipe</Link>
             </Typography>
           </Toolbar>
         </AppBar>

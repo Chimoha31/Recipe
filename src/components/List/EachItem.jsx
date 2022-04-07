@@ -1,46 +1,46 @@
 import React, { useState } from "react";
 import "./EachItem.css";
 import Ingredient from "../Ingredients/Ingredients";
-import { v4 as uuidv4 } from "uuid";
 
-function EachItem({ recipes }) {
+function EachItem({ recipe }) {
   const [show, setShow] = useState(false);
 
-  const handleClick = () => {
-    setShow(!show);
-  };
+  const { image, label, cuisineType, url } = recipe.recipe;
 
   return (
     <div>
       <div className="recipe_list">
         <ul>
-          {recipes.map((recipe) => (
-            <div key={uuidv4()} className="recipe_item">
-              <li>
-                <img src={recipe.recipe.image} alt="recipe" />
+          <div className="recipe_item">
+            <li>
+              <img src={image} alt="recipe" />
+            </li>
+            <li>
+              <h2>{label}</h2>
+            </li>
+            <li>
+              <p>[{cuisineType}]</p>
+            </li>
+            {/* Btn */}
+            <div className="link_btn">
+              <li className="detail_btn">
+                <a
+                  href={url}
+                  className="detail_link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Detail
+                </a>
               </li>
-              <li>
-                <h2>{recipe.recipe.label}</h2>
+              <li className="ingredients_btn">
+                <span className="btn" onClick={() => setShow(!show)}>
+                  Ingredients
+                </span>
+                {show && <Ingredient ingredients={recipe.recipe.ingredients} />}
               </li>
-              <li>
-                <p>[{recipe.recipe.cuisineType}]</p>
-              </li>
-              {/* Btn */}
-              <div className="link_btn">
-                <li className="detail_btn">
-                  <a href={recipe.recipe.url} className="detail_link" target="_blank">
-                    Detail
-                  </a>
-                </li>
-                <li className="ingredients_btn" onClick={handleClick}>
-                  <span className="btn">Ingredients</span>
-                  {show && (
-                    <Ingredient ingredients={recipe.recipe.ingredients} />
-                  )}
-                </li>
-              </div>
             </div>
-          ))}
+          </div>
         </ul>
       </div>
     </div>

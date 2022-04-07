@@ -163,7 +163,7 @@
   text-align: center;
   padding: 12px 10px;
   border-radius: 10px;
-  box-shadow: 5px 5px 15px rgb(87, 81, 81);
+  box-shadow: 3px 3px 10px rgb(87, 81, 81);
   animation: slide_btn 1.2s ease-in-out forwards;
 }
 
@@ -175,6 +175,7 @@
   text-decoration: none;
   font-size: 25px;
   font-family: 'Lalezar', cursive;
+  color:#fff;
 }
 
 @keyframes slide_btn{
