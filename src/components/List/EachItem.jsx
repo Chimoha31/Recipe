@@ -1,24 +1,38 @@
 import React, { useState } from "react";
 import "./EachItem.css";
 import Ingredient from "../Ingredients/Ingredients";
+import caloriesIcon from "../../images/calories.png";
+import clock from "../../gif/clock.gif";
 
 function EachItem({ recipe }) {
   const [show, setShow] = useState(false);
 
-  const { image, label, cuisineType, url } = recipe.recipe;
+  const { image, label, cuisineType, url, calories, totalTime } = recipe.recipe;
 
   return (
     <div className="each_item">
       <ul>
         <div className="recipe_item">
-          <li>
+          <li className="img_container">
             <img src={image} alt="recipe" />
           </li>
           <li>
-            <h2>{label}</h2>
+            <div className="title_container">
+              <h2>{label}</h2>
+              <div className="clock_container">
+                <img src={clock} alt="clock icon" />
+                <p>{totalTime}</p>
+              </div>
+            </div>
+          </li>
+          <li className="cuisine">
+            <p>[{cuisineType}]</p>
           </li>
           <li>
-            <p>[{cuisineType}]</p>
+            <div className="calories_container">
+              <img src={caloriesIcon} alt="calories icon" />
+              <p>{Math.floor(calories)}cal</p>
+            </div>
           </li>
           {/* Btn */}
           <div className="link_btn">
