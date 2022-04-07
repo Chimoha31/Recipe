@@ -8,41 +8,39 @@ function EachItem({ recipe }) {
   const { image, label, cuisineType, url } = recipe.recipe;
 
   return (
-    <div>
-      <div className="recipe_list">
-        <ul>
-          <div className="recipe_item">
-            <li>
-              <img src={image} alt="recipe" />
+    <div className="each_item">
+      <ul>
+        <div className="recipe_item">
+          <li>
+            <img src={image} alt="recipe" />
+          </li>
+          <li>
+            <h2>{label}</h2>
+          </li>
+          <li>
+            <p>[{cuisineType}]</p>
+          </li>
+          {/* Btn */}
+          <div className="link_btn">
+            <li className="detail_btn">
+              <a
+                href={url}
+                className="detail_link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Detail
+              </a>
             </li>
-            <li>
-              <h2>{label}</h2>
+            <li className="ingredients_btn">
+              <span className="btn" onClick={() => setShow(!show)}>
+                Ingredients
+              </span>
+              {show && <Ingredient ingredients={recipe.recipe.ingredients} />}
             </li>
-            <li>
-              <p>[{cuisineType}]</p>
-            </li>
-            {/* Btn */}
-            <div className="link_btn">
-              <li className="detail_btn">
-                <a
-                  href={url}
-                  className="detail_link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Detail
-                </a>
-              </li>
-              <li className="ingredients_btn">
-                <span className="btn" onClick={() => setShow(!show)}>
-                  Ingredients
-                </span>
-                {show && <Ingredient ingredients={recipe.recipe.ingredients} />}
-              </li>
-            </div>
           </div>
-        </ul>
-      </div>
+        </div>
+      </ul>
     </div>
   );
 }
