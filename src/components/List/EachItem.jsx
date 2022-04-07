@@ -46,8 +46,8 @@ function EachItem({ recipe }) {
                 Detail
               </a>
             </li>
-            <li className="ingredients_btn">
-              <span className="btn" onClick={() => setShow(!show)}>
+            <li className="ingredients_btn"  onClick={() => setShow(!show)}>
+              <span className="btn">
                 Ingredients
               </span>
               {show && <Ingredient ingredients={recipe.recipe.ingredients} />}
