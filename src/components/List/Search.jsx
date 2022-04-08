@@ -34,6 +34,7 @@ function Search({setRecipes}) {
 
   useEffect(() => {
     getRecipe();
+    // eslint-disable-next-line
   }, [item]);
 
   return (
